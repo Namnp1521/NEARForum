@@ -46930,6 +46930,7 @@ var _config = _interopRequireDefault(require("./config"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// https://stackoverflow.com/questions/69952774/reactjs-not-call-method-from-smart-contract-near-on-product-testnet-does-not
 const nearConfig = (0, _config.default)("development" || "development"); // Initialize contract & set global variables
 
 async function initContract() {
@@ -48480,7 +48481,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62914" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50365" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
