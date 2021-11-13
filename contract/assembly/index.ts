@@ -52,7 +52,7 @@ export function dislikePost(idPost: string): Post {
   let post = checkPost(idPost);
   post.disLike();
   postsForStore.set(idPost, post);
-  logging.log("Like success!");
+  logging.log("dislike success!");
   return post;
 }
 

@@ -32,8 +32,10 @@ export class Post {
 
   disLike(): void {
     if (this.likes.includes(context.sender)) {
-      let id = this.likes.findIndex((data) => data === context.sender);
-      this.likes.splice(id, 1);
+      let id = this.likes.findIndex((data) => data == context.sender);
+      if (id != -1) {
+        this.likes.splice(id, 1);
+      }
     }
   }
 }
