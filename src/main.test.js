@@ -30,3 +30,30 @@ test("showAllPosts", async () => {
   const res = await window.contract.showAllPosts();
   expect(res.length).toEqual(0);
 });
+
+test("addPost", async () => {
+  await window.contract.addPost({ content: "hello world" });
+  const res = await window.contract.showAllPosts();
+  expect(res[0].content).toEqual("hello world");
+});
+
+test("likePost", async () => {
+  await window.contract.addPost({ content: "hello world" });
+  const res = await window.contract.showAllPosts();
+  const post = await window.contract.likePost({ idPost: res[0].id });
+  expect(post.likes.length).toEqual(1);
+});
+
+test("dislikePost", async () => {
+  await window.contract.addPost({ content: "hello world" });
+  const res = await window.contract.showAllPosts();
+  const post = await window.contract.dislikePost({ idPost: res[0].id });
+  expect(post.likes.length).toEqual(0);
+});
+
+test("donatePost", async () => {
+  await window.contract.addPost({ content: "hello world" });
+  const res = await window.contract.showAllPosts();
+  const post = await window.contract.donatePost({ idPost: res[0].id });
+  expect(post.donateCount).toEqual(1);
+});

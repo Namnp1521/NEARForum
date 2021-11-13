@@ -10,7 +10,7 @@
 /dist
 
 # keys
-/neardev
+# /neardev
 
 # testing
 /coverage
