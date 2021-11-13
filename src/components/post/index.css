@@ -1,0 +1,119 @@
+.post-wrap {
+  width: 500px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+.post-wrap .post-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.post-wrap .post-header .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.post-wrap .post-header .name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.post-wrap .post-header .time {
+  font-size: 12px;
+  font-weight: 500;
+  color: #c4c4c4;
+  display: flex;
+  align-items: center;
+}
+
+.post-wrap .post-header .time span {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.post-wrap .content {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 20px 20px 20px;
+  white-space: pre-wrap;
+}
+
+.post-wrap .line {
+  background-color: var(--bg);
+  width: 90%;
+  height: 1px;
+  margin-left: 5%;
+}
+
+.post-wrap .post-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.post-wrap .post-footer .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #535353;
+  user-select: none;
+  margin: 5px 10px;
+  border-radius: 5px;
+}
+
+.post-wrap .post-footer .btn .like {
+  color: var(--primary);
+}
+
+.post-wrap .post-footer .btn:hover {
+  background-color: #c4c4c4;
+}
+
+.post-wrap .post-footer .btn:active {
+  opacity: 0.8;
+}
+
+.post-wrap .post-footer span {
+  font-size: 14px;
+  margin: 0 3px;
+}
+
+.post-wrap .post-footer .material-icons {
+  font-size: 18px;
+}
+
+.post-wrap .comment-list {
+  margin-bottom: 10px;
+}
+
+.post-wrap .count-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 20px;
+}
+
+.post-wrap .count-wrap span {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.post-wrap .count-wrap .coin {
+  color: var(--primary);
+}

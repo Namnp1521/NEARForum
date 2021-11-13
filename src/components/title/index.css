@@ -1,0 +1,45 @@
+.header-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 -3px 10px 1px var(--primary);
+}
+
+.header-wrap .logo {
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-wrap span {
+  font-size: 14px;
+}
+
+.header-wrap .user {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.header-wrap .btn-login {
+  font-size: 16px;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 7px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 3px 5px 3px #c4c4c4;
+}
+
+.header-wrap .btn-login:active {
+  opacity: 0.8;
+  box-shadow: 0 0;
+}

@@ -1,0 +1,59 @@
+.add-cmt-wrap {
+  width: 500px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.add-cmt-wrap .input-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.add-cmt-wrap .logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+.add-cmt-wrap textarea {
+  resize: none;
+  width: 80%;
+  height: 40px;
+  border: none;
+  background-color: var(--bg-text);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-cmt-wrap .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.add-cmt-wrap .btn:active {
+  opacity: 0.7;
+}
+
+.add-cmt-wrap .btn span {
+  font-size: 24px;
+  color: var(--primary);
+  user-select: none;
+}

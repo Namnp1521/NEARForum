@@ -1,0 +1,72 @@
+.add-wrap {
+  width: 500px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+.add-wrap .input-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.add-wrap .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.add-wrap textarea {
+  resize: none;
+  width: 80%;
+  min-height: 50px;
+  border: none;
+  background-color: var(--bg-text);
+  border-radius: 5px;
+  padding: 5px 10px;
+  overflow: hidden;
+  margin: 20px 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-wrap .btn-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-wrap .btn {
+  font-size: 16px;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 7px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 5px 3px #c4c4c4;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-wrap .btn-loading {
+  opacity: 0.8;
+  box-shadow: 0 0;
+  cursor: not-allowed;
+}
+
+.add-wrap .btn:active {
+  opacity: 0.8;
+  box-shadow: 0 0;
+}
