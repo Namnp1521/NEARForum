@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME ||'nearforum.testnet'
+const CONTRACT_NAME = process.env.CONTRACT_NAME ||'nearforum.lotustar.testnet'
 
 function getConfig(env) {
   switch (env) {

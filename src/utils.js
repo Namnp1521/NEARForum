@@ -1,6 +1,7 @@
 import { connect, Contract, keyStores, WalletConnection } from "near-api-js";
 import getConfig from "./config";
 
+// https://stackoverflow.com/questions/69952774/reactjs-not-call-method-from-smart-contract-near-on-product-testnet-does-not
 const nearConfig = getConfig(process.env.NODE_ENV || "development");
 
 // Initialize contract & set global variables
