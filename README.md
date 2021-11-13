@@ -54,7 +54,7 @@ Ensure that it's installed with `near --version` (or `npx near --version`)
 Step 1: Create an account for the contract
 ------------------------------------------
 
-Each account on NEAR can have at most one contract deployed to it. If you've already created an account such as `your-name.testnet`, you can deploy your contract to `NEARForum.your-name.testnet`. Assuming you've already created an account on [NEAR Wallet], here's how to create `NEARForum.your-name.testnet`:
+Each account on NEAR can have at most one contract deployed to it. If you've already created an account such as `your-name.testnet`, you can deploy your contract to `nearforum.your-name.testnet`. Assuming you've already created an account on [NEAR Wallet], here's how to create `nearforum.your-name.testnet`:
 
 1. Authorize NEAR CLI, following the commands it gives you:
 
@@ -62,7 +62,7 @@ Each account on NEAR can have at most one contract deployed to it. If you've alr
 
 2. Create a subaccount (replace `YOUR-NAME` below with your actual account name):
 
-      near create-account NEARForum.YOUR-NAME.testnet --masterAccount YOUR-NAME.testnet
+      near create-account nearforum.YOUR-NAME.testnet --masterAccount YOUR-NAME.testnet
 
 
 Step 2: set contract name in code
