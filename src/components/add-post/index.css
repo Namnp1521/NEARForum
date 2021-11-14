@@ -1,5 +1,6 @@
 .add-wrap {
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   background-color: #ffffff;
   margin-top: 20px;
   border-radius: 7px;
