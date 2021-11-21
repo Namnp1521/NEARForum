@@ -105,7 +105,9 @@ export default function Post(props) {
             <span>{data.comments.length} comments</span>
           )}
           {data.donateCount > 0 && (
-            <span className="coin">{(data.donateCount * DONATE).toFixed(2)} NEAR</span>
+            <span className="coin">
+              {(data.donateCount * DONATE).toFixed(2)} Ⓝ
+            </span>
           )}
         </div>
       </div>

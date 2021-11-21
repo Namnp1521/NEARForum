@@ -5,12 +5,20 @@ const POST_LIMIT = 10;
 
 const POST_SIZE: u32 = 16;
 
+/**
+ * generate id when create new post
+ * @returns id string
+ */
 export function generatePostNumber(): string {
   let buf = math.randomBuffer(POST_SIZE);
   let b64 = base64.encode(buf);
   return b64;
 }
 
+/**
+ * add new post to storage
+ * @param content string content of post
+ */
 export function addPost(content: string): void {
   let id = generatePostNumber();
   const message = new Post(content, id);
@@ -18,6 +26,12 @@ export function addPost(content: string): void {
   idPostsForShow.push(id);
 }
 
+/**
+ * add new comment to post by idPost
+ * @param content string content of comment
+ * @param idPost id post
+ * @returns Post that user comment
+ */
 export function addComment(content: string, idPost: string): Post {
   let post = checkPost(idPost);
   post.addComment(content);
@@ -26,6 +40,10 @@ export function addComment(content: string, idPost: string): Post {
   return post;
 }
 
+/**
+ * show 10 posts newest
+ * @returns array contain 10 posts
+ */
 export function showAllPosts(): Post[] {
   const numMessages = min(POST_LIMIT, idPostsForShow.length);
   const startIndex = idPostsForShow.length - numMessages;
@@ -40,6 +58,11 @@ export function showAllPosts(): Post[] {
   return result;
 }
 
+/**
+ * push id user to likes property of Post
+ * @param idPost id post
+ * @returns Post that user like
+ */
 export function likePost(idPost: string): Post {
   let post = checkPost(idPost);
   post.like();
@@ -48,6 +71,11 @@ export function likePost(idPost: string): Post {
   return post;
 }
 
+/**
+ * remove id user from likes property of Post
+ * @param idPost id post
+ * @returns Post that user dislike
+ */
 export function dislikePost(idPost: string): Post {
   let post = checkPost(idPost);
   post.disLike();
@@ -56,6 +84,9 @@ export function dislikePost(idPost: string): Post {
   return post;
 }
 
+/**
+ * clear all post from storage
+ */
 export function clearAllPosts(): void {
   for (let i = 0; i < idPostsForShow.length; i++) {
     let post = postsForStore.get(idPostsForShow[i]);
@@ -70,6 +101,11 @@ export function clearAllPosts(): void {
   }
 }
 
+/**
+ * increase amount donate time of post
+ * @param idPost id post
+ * @returns Post that user donate
+ */
 export function donatePost(idPost: string): Post {
   let post = checkPost(idPost);
   post.donate();
@@ -78,6 +114,11 @@ export function donatePost(idPost: string): Post {
   return post;
 }
 
+/**
+ * check post exist by id
+ * @param idPost id post
+ * @returns Post
+ */
 export function checkPost(idPost: string): Post {
   let post = postsForStore.get(idPost);
   if (!post) {
