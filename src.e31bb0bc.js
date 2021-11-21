@@ -48261,7 +48261,7 @@ function Post(props) {
     className: "count-wrap"
   }, data.likes?.length > 0 ? /*#__PURE__*/_react.default.createElement("span", null, "\uD83D\uDC4D ", data.likes.length) : /*#__PURE__*/_react.default.createElement("span", null), /*#__PURE__*/_react.default.createElement("div", null, data.comments.length > 0 && /*#__PURE__*/_react.default.createElement("span", null, data.comments.length, " comments"), data.donateCount > 0 && /*#__PURE__*/_react.default.createElement("span", {
     className: "coin"
-  }, (data.donateCount * DONATE).toFixed(2), " NEAR"))), /*#__PURE__*/_react.default.createElement("div", {
+  }, (data.donateCount * DONATE).toFixed(2), " \u24C3"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "line"
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "post-footer"
@@ -48481,7 +48481,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49490" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55272" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
