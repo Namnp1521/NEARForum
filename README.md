@@ -1,14 +1,37 @@
 NEARForum - a blockchain web 3 application based on NEAR platform
 ==================
+OVERVIEW
+======
+
+NEARForum is a social networking project on a decentralized platform. Everyone can create posts, comment, like or donate like normal social networks.
+
+ - The contract code lives in the `/contract/assembly` folder.
+ - The web app made by ReactJS framework
+
+The demo from challenge Dacade courses "NEAR Development 101": [https://dacade.org/communities/near/courses/near-101/]
+
+ - [Demo Website.]
+ - You can signup here to learn and earn crypto: https://dacade.org/signup?invite=lotustar
+
+TECHNOLOGY
+======
+
+ - `ReactJS`
+ - `Near SDK (near-sdk-as)`
 
 SCREEN
 ======
 
 ![login page](images/home.png)
 
-==================
+INSTALL
+======
 
-DEPLOY
+1. Prerequisites: Make sure you have Node.js ≥ 12 installed (https://nodejs.org), then use it to install [yarn]: npm install --global yarn (or just npm i -g yarn)
+2. Run the local development server: yarn && yarn dev (see package.json for a full list of scripts you can run with yarn)
+
+
+BUILD & DEPLOY
 ======
 
 Every smart contract in NEAR has its [own associated account][NEAR accounts]. When you run `yarn dev`, your smart contract gets deployed to the live NEAR TestNet with a throwaway account. When you're ready to make it permanent, here's how.
@@ -75,3 +98,4 @@ As you can see in `package.json`, this does two things:
   [NEAR Wallet]: https://wallet.testnet.near.org/
   [near-cli]: https://github.com/near/near-cli
   [gh-pages]: https://github.com/tschaub/gh-pages
+  [Demo Website.]: https://namnp1521.github.io/NEARForum/
