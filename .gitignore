@@ -6,6 +6,9 @@
 /.pnp
 .pnp.js
 
+neardev/dev-account
+neardev/dev-account.env
+
 # build
 /out/
 /dist/
