@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import Big from "big.js";
 import "./index.css";
-
-const BOATLOAD_OF_GAS = Big(3)
-  .times(10 ** 13)
-  .toFixed();
+import { BOATLOAD_OF_GAS } from '../../utils';
 
 export default function AddPost(props) {
   const { setPost, user } = props;
@@ -24,10 +20,7 @@ export default function AddPost(props) {
         {
           content: content,
         },
-        BOATLOAD_OF_GAS,
-        Big("0")
-          .times(10 ** 24)
-          .toFixed()
+        BOATLOAD_OF_GAS
       )
       .then(() => {
         setContent("");
