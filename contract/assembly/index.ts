@@ -11,8 +11,7 @@ const POST_SIZE: u32 = 16;
  */
 export function generatePostNumber(): string {
   let buf = math.randomBuffer(POST_SIZE);
-  let b64 = base64.encode(buf);
-  return b64;
+  return base64.encode(buf);
 }
 
 /**
@@ -20,6 +19,8 @@ export function generatePostNumber(): string {
  * @param content string content of post
  */
 export function addPost(content: string): void {
+  assert(content.length > 0, "Please, provide article content");
+
   let id = generatePostNumber();
   const message = new Post(content, id);
   postsForStore.set(id, message);
@@ -33,6 +34,9 @@ export function addPost(content: string): void {
  * @returns Post that user comment
  */
 export function addComment(content: string, idPost: string): Post {
+  assert(idPost.length > 0, "Please, provide comment text");
+  assert(content.length > 0, "Please, provide comment text");
+
   let post = checkPost(idPost);
   post.addComment(content);
   postsForStore.set(idPost, post);

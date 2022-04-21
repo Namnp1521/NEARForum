@@ -1,5 +1,6 @@
 import { connect, Contract, keyStores, WalletConnection } from "near-api-js";
 import getConfig from "./config";
+import Big from 'big.js';
 
 // https://stackoverflow.com/questions/69952774/reactjs-not-call-method-from-smart-contract-near-on-product-testnet-does-not
 const nearConfig = getConfig(process.env.NODE_ENV || "development");
@@ -53,3 +54,7 @@ export function login() {
   // the private key in localStorage.
   window.walletConnection.requestSignIn(nearConfig.contractName, "NEAR Forum");
 }
+
+export const BOATLOAD_OF_GAS = Big(30)
+  .times(10 ** 12)
+  .toFixed();

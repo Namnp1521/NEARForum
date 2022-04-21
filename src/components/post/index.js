@@ -3,10 +3,8 @@ import AddComment from "../add-comment";
 import Comment from "../comment";
 import Big from "big.js";
 import "./index.css";
+import { BOATLOAD_OF_GAS } from '../../utils';
 
-const BOATLOAD_OF_GAS = Big(3)
-  .times(10 ** 13)
-  .toFixed();
 const DONATE = 0.1;
 
 export default function Post(props) {
@@ -53,10 +51,7 @@ export default function Post(props) {
           {
             idPost: data.id,
           },
-          BOATLOAD_OF_GAS,
-          Big("0")
-            .times(10 ** 24)
-            .toFixed()
+          BOATLOAD_OF_GAS
         )
         .then((res) => {
           setLoading(false);
@@ -68,10 +63,7 @@ export default function Post(props) {
           {
             idPost: data.id,
           },
-          BOATLOAD_OF_GAS,
-          Big("0")
-            .times(10 ** 24)
-            .toFixed()
+          BOATLOAD_OF_GAS
         )
         .then((res) => {
           setLoading(false);

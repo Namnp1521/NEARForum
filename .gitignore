@@ -2,12 +2,14 @@
 # Developer note: near.gitignore will be renamed to .gitignore upon project creation
 # dependencies
 /node_modules
+/contract/node_modules
 /.pnp
 .pnp.js
 
 # build
-/out
-/dist
+/out/
+/dist/
+.idea/
 
 # keys
 # /neardev
