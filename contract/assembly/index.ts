@@ -9,7 +9,7 @@ const POST_SIZE: u32 = 16;
  * generate id when create new post
  * @returns id string
  */
-export function generatePostNumber(): string {
+ function generatePostNumber(): string {
   let buf = math.randomBuffer(POST_SIZE);
   let b64 = base64.encode(buf);
   return b64;
